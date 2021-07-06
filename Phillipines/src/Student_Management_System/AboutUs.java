@@ -28,7 +28,7 @@ public class AboutUs extends JFrame {
 	}
 
 	public AboutUs() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\6mohe\\Desktop\\image\\icon.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("image/icon.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1111, 574);
 		contentPane = new JPanel();
@@ -48,7 +48,7 @@ public class AboutUs extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\Moheb.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("image/Moheb.png"));
 		lblNewLabel_2.setBounds(63, 135, 295, 279);
 		contentPane.add(lblNewLabel_2);
 		
@@ -73,22 +73,22 @@ public class AboutUs extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\Mahbub.png"));
+		lblNewLabel_4.setIcon(new ImageIcon("image/Mahbub.png"));
 		lblNewLabel_4.setBounds(701, 152, 76, 65);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_4_1 = new JLabel("");
-		lblNewLabel_4_1.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\Jafrin.png"));
+		lblNewLabel_4_1.setIcon(new ImageIcon("image/Jafrin.png"));
 		lblNewLabel_4_1.setBounds(701, 229, 76, 65);
 		contentPane.add(lblNewLabel_4_1);
 		
 		JLabel lblNewLabel_4_2 = new JLabel("");
-		lblNewLabel_4_2.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\Nushrat.png"));
+		lblNewLabel_4_2.setIcon(new ImageIcon("image/Nushrat.png"));
 		lblNewLabel_4_2.setBounds(701, 305, 76, 65);
 		contentPane.add(lblNewLabel_4_2);
 		
 		JLabel lblNewLabel_4_3 = new JLabel("");
-		lblNewLabel_4_3.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\Neha.png"));
+		lblNewLabel_4_3.setIcon(new ImageIcon("image/Neha.png"));
 		lblNewLabel_4_3.setBounds(701, 394, 76, 65);
 		contentPane.add(lblNewLabel_4_3);
 		
@@ -168,7 +168,7 @@ public class AboutUs extends JFrame {
 		contentPane.add(lblNewLabel_7_2);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\aboutlogo.png"));
+		lblNewLabel_8.setIcon(new ImageIcon("image/aboutlogo.png"));
 		lblNewLabel_8.setBounds(387, 184, 274, 230);
 		contentPane.add(lblNewLabel_8);
 		
@@ -186,7 +186,7 @@ public class AboutUs extends JFrame {
 		contentPane.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\aboutbg.png"));
+		lblNewLabel_10.setIcon(new ImageIcon("image/aboutbg.png"));
 		lblNewLabel_10.setBounds(0, 0, 1095, 535);
 		contentPane.add(lblNewLabel_10);
 	}

@@ -41,7 +41,7 @@ public class Student extends JFrame {
 
 
 	public Student() throws Exception{
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:/Users/6mohe/Desktop/image/icon.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("image/icon.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 708, 469);
 		contentPane = new JPanel();
@@ -58,7 +58,7 @@ public class Student extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setIcon(new ImageIcon("C:/Users/6mohe/Desktop/image/searchbar.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("image/searchbar.png"));
 		lblNewLabel_1.setBounds(144, 72, 46, 40);
 		contentPane.add(lblNewLabel_1);
 		
@@ -79,7 +79,7 @@ public class Student extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\search.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("image/search.png"));
 		lblNewLabel_2.setBounds(20, 156, 314, 229);
 		contentPane.add(lblNewLabel_2);
 		
@@ -217,7 +217,7 @@ public class Student extends JFrame {
 		contentPane.add(lblNewLabel_4_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\6mohe\\Desktop\\image\\searchlogo.png"));
+		lblNewLabel_3.setIcon(new ImageIcon("image/searchlogo.png"));
 		lblNewLabel_3.setBounds(0, 0, 692, 430);
 		contentPane.add(lblNewLabel_3);
 		UserPhoneget.setVisible(false);

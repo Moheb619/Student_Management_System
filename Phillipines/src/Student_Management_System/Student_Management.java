@@ -65,7 +65,7 @@ public class Student_Management extends JFrame {
 		setLocationRelativeTo(null);
 		
 //		Set Icon
-		ImageIcon img = new ImageIcon("C:/Users/6mohe/Desktop/image/icon.png");   
+		ImageIcon img = new ImageIcon("image/icon.png");   
 		setIconImage(img.getImage()); 
 		
 //		Set Background color
@@ -83,7 +83,7 @@ public class Student_Management extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:/Users/6mohe/Desktop/image/logo.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("image/logo.png"));
 		lblNewLabel_2.setBounds(61, 56, 406, 217);
 		contentPane.add(lblNewLabel_2);
 		

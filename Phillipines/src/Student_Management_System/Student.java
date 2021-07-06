@@ -68,7 +68,7 @@ public class Student extends JFrame {
 		search_bar.setBounds(222, 72, 233, 40);
 		contentPane.add(search_bar);
 		
-		String url="jdbc:mysql://localhost:3306/databasename"; 			//ip port and database name stored in the url
+		String url="jdbc:mysql://localhost:3306/databasename"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
 		String uname="username"; 										//default username root
 		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);

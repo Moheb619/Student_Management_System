@@ -1,14 +1,8 @@
 package Student_Management_System;
 
-import java.io.BufferedReader;
-
-import java.io.FileReader;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.io.PrintWriter;
-import java.io.File;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -147,9 +141,9 @@ public class Student_Management extends JFrame {
 		scrollPane.setViewportView(table);
 
 //Connecting JDBC
-		String url="jdbc:mysql://localhost:3306/student"; 			//ip port and database name stored in the url (create a database and add a table with Id,Name,Address,Course,Email,Phone)
-		String uname="root"; 										//default username root
-		String pass="Abarmysql12#"; 
+		String url="jdbc:mysql://localhost:3306/Database_name"; 			//ip port and database name stored in the url (create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String uname="username"; 										//default username root
+		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		Statement st=con.createStatement(); 
 		

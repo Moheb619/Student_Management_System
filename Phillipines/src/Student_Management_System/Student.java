@@ -23,7 +23,6 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JSlider;
 import javax.swing.JTextArea;
 
 public class Student extends JFrame {
@@ -69,9 +68,9 @@ public class Student extends JFrame {
 		search_bar.setBounds(222, 72, 233, 40);
 		contentPane.add(search_bar);
 		
-		String url="jdbc:mysql://localhost:3306/student"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
-		String uname="root"; 										//default username root
-		String pass="Abarmysql12#"; 
+		String url="jdbc:mysql://localhost:3306/Database_Name"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String uname="username"; 										//default username root
+		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		Statement st=con.createStatement();		
 		JButton btnNewButton = new JButton("Search ID");

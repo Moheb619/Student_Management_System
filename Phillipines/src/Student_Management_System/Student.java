@@ -24,6 +24,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JSlider;
+import javax.swing.JTextArea;
 
 public class Student extends JFrame {
 
@@ -68,9 +69,9 @@ public class Student extends JFrame {
 		search_bar.setBounds(222, 72, 233, 40);
 		contentPane.add(search_bar);
 		
-		String url="jdbc:mysql://localhost:3306/databasename"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
-		String uname="username"; 										//default username root
-		String pass="password"; 
+		String url="jdbc:mysql://localhost:3306/student"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String uname="root"; 										//default username root
+		String pass="Abarmysql12#"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		Statement st=con.createStatement();		
 		JButton btnNewButton = new JButton("Search ID");
@@ -82,111 +83,6 @@ public class Student extends JFrame {
 		lblNewLabel_2.setIcon(new ImageIcon("image/search.png"));
 		lblNewLabel_2.setBounds(20, 156, 314, 229);
 		contentPane.add(lblNewLabel_2);
-		
-		JLabel UserID = new JLabel("ID             :");
-		UserID.setForeground(Color.WHITE);
-		UserID.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserID.setBounds(400, 180, 75, 14);
-		contentPane.add(UserID);
-		UserID.setVisible(false);
-		
-		JLabel UserName = new JLabel("Name       :");
-		UserName.setForeground(Color.WHITE);
-		UserName.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserName.setBounds(400, 212, 75, 14);
-		contentPane.add(UserName);
-		UserName.setVisible(false);
-		
-		JLabel UserAddress = new JLabel("Address   :");
-		UserAddress.setForeground(Color.WHITE);
-		UserAddress.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserAddress.setBounds(400, 248, 75, 14);
-		contentPane.add(UserAddress);
-		UserAddress.setVisible(false);
-		
-		JLabel UserCourse = new JLabel("Course     :");
-		UserCourse.setForeground(Color.WHITE);
-		UserCourse.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserCourse.setBounds(400, 280, 75, 14);
-		contentPane.add(UserCourse);
-		UserCourse.setVisible(false);
-		
-		JLabel UserEmail = new JLabel("Email        :");
-		UserEmail.setForeground(Color.WHITE);
-		UserEmail.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserEmail.setBounds(400, 315, 75, 14);
-		contentPane.add(UserEmail);
-		UserEmail.setVisible(false);
-		
-		JLabel UserPhone = new JLabel("Phone      :");
-		UserPhone.setForeground(Color.WHITE);
-		UserPhone.setFont(new Font("Tahoma", Font.BOLD, 14));
-		UserPhone.setBounds(400, 353, 75, 14);
-		contentPane.add(UserPhone);
-		UserPhone.setVisible(false);
-		
-		JLabel UserIDget = new JLabel("");
-		UserIDget.setForeground(Color.WHITE);
-		UserIDget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserIDget.setBounds(479, 180, 208, 14);
-		contentPane.add(UserIDget);
-		UserIDget.setVisible(false);
-		
-		JLabel UserNameget = new JLabel("");
-		UserNameget.setForeground(Color.WHITE);
-		UserNameget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserNameget.setBounds(479, 212, 208, 14);
-		contentPane.add(UserNameget);
-		UserNameget.setVisible(false);
-		
-		JLabel UserAddressget = new JLabel("");
-		UserAddressget.setForeground(Color.WHITE);
-		UserAddressget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserAddressget.setBounds(479, 248, 208, 14);
-		contentPane.add(UserAddressget);
-		UserAddressget.setVisible(false);
-		
-		JLabel UserCourseget = new JLabel("");
-		UserCourseget.setForeground(Color.WHITE);
-		UserCourseget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserCourseget.setBounds(479, 280, 208, 14);
-		contentPane.add(UserCourseget);
-		UserCourseget.setVisible(false);
-		
-		JLabel UserEmailget = new JLabel("");
-		UserEmailget.setForeground(Color.WHITE);
-		UserEmailget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserEmailget.setBounds(479, 315, 208, 14);
-		contentPane.add(UserEmailget);
-		UserEmailget.setVisible(false);
-		
-		JLabel UserPhoneget = new JLabel("");
-		UserPhoneget.setForeground(Color.WHITE);
-		UserPhoneget.setFont(new Font("Tahoma", Font.BOLD, 13));
-		UserPhoneget.setBounds(479, 349, 208, 18);
-		contentPane.add(UserPhoneget);
-		
-		JButton btnClear = new JButton("Clear");
-		btnClear.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				UserID.setVisible(false);
-				UserName.setVisible(false);
-				UserAddress.setVisible(false);
-				UserCourse.setVisible(false);
-				UserEmail.setVisible(false);
-				UserPhone.setVisible(false);
-				UserIDget.setVisible(false);
-				UserNameget.setVisible(false);
-				UserAddressget.setVisible(false);
-				UserCourseget.setVisible(false);
-				UserEmailget.setVisible(false);
-				UserPhoneget.setVisible(false);
-				
-				search_bar.setText("");
-			}
-		});
-		btnClear.setBounds(366, 121, 89, 23);
-		contentPane.add(btnClear);
 		
 		JLabel lblNewLabel_4 = new JLabel("Login");
 		lblNewLabel_4.addMouseListener(new MouseAdapter() {
@@ -216,11 +112,21 @@ public class Student extends JFrame {
 		lblNewLabel_4_1.setBounds(96, 25, 64, 23);
 		contentPane.add(lblNewLabel_4_1);
 		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("image/searchlogo.png"));
-		lblNewLabel_3.setBounds(0, 0, 692, 430);
-		contentPane.add(lblNewLabel_3);
-		UserPhoneget.setVisible(false);
+		JLabel lblNewLabel_5 = new JLabel("Search Result");
+		lblNewLabel_5.setForeground(Color.WHITE);
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_5.setBounds(458, 156, 110, 23);
+		lblNewLabel_5.setVisible(false);
+		contentPane.add(lblNewLabel_5);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setWrapStyleWord(true);
+		textArea.setLineWrap(true);
+		textArea.setEditable(false);
+		textArea.setBounds(382, 181, 264, 222);
+		textArea.setFont(new Font("Tahoma", Font.BOLD, 14));
+		contentPane.add(textArea);
+		textArea.setVisible(false);
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -230,42 +136,16 @@ public class Student extends JFrame {
 					ResultSet rs=st.executeQuery(sql);
 						if(rs.next())
 						{
-							UserIDget.setText(String.valueOf(rs.getInt("Id")));
-							UserNameget.setText(rs.getString("Name"));
-							UserAddressget.setText(rs.getString("Address"));
-							UserCourseget.setText(rs.getString("Course"));
-							UserEmailget.setText(rs.getString("Email"));
-							UserPhoneget.setText(rs.getString("Phone"));
-							
-							UserID.setVisible(true);
-							UserName.setVisible(true);
-							UserAddress.setVisible(true);
-							UserCourse.setVisible(true);
-							UserEmail.setVisible(true);
-							UserPhone.setVisible(true);
-							UserIDget.setVisible(true);
-							UserNameget.setVisible(true);
-							UserAddressget.setVisible(true);
-							UserCourseget.setVisible(true);
-							UserEmailget.setVisible(true);
-							UserPhoneget.setVisible(true);
-							
+							lblNewLabel_5.setVisible(true);
+							textArea.setVisible(true);
+							String result="\n"+"   Id: "+rs.getInt("Id")+"\n\n"+"   Name: "+rs.getString("Name")+"\n\n"+"   Address: "+rs.getString("Address")+"\n\n"+"   Course: "+rs.getString("Course")+"\n\n"+"   Email: "+rs.getString("Email")+"\n\n"+"   Phone: "+rs.getString("Phone");
+							textArea.setText(result);						
 							search_bar.setText("");
 							
 						}
 						else {
-							UserID.setVisible(false);
-							UserName.setVisible(false);
-							UserAddress.setVisible(false);
-							UserCourse.setVisible(false);
-							UserEmail.setVisible(false);
-							UserPhone.setVisible(false);
-							UserIDget.setVisible(false);
-							UserNameget.setVisible(false);
-							UserAddressget.setVisible(false);
-							UserCourseget.setVisible(false);
-							UserEmailget.setVisible(false);
-							UserPhoneget.setVisible(false);
+							lblNewLabel_5.setVisible(false);
+							textArea.setVisible(false);
 							search_bar.setText("");
 							JOptionPane.showInternalMessageDialog(null, "No ID found", "Not Found", JOptionPane.WARNING_MESSAGE);
 						}
@@ -276,5 +156,22 @@ public class Student extends JFrame {
 				}
 			}
 		});
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_5.setVisible(false);
+				textArea.setText("");
+				textArea.setVisible(false);
+				search_bar.setText("");
+			}
+		});
+		btnClear.setBounds(366, 121, 89, 23);
+		contentPane.add(btnClear);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("image/searchlogo.png"));
+		lblNewLabel_3.setBounds(0, 0, 692, 430);
+		contentPane.add(lblNewLabel_3);
 	}
 }

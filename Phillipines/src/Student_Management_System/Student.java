@@ -68,8 +68,8 @@ public class Student extends JFrame {
 		search_bar.setBounds(222, 72, 233, 40);
 		contentPane.add(search_bar);
 		
-		String url="jdbc:mysql://localhost:3306/Database_Name"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
-		String uname="username"; 										//default username root
+		String url="jdbc:mysql://localhost:3306/Database-name"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String uname="root"; 										//default username root
 		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		Statement st=con.createStatement();		
@@ -137,7 +137,7 @@ public class Student extends JFrame {
 						{
 							lblNewLabel_5.setVisible(true);
 							textArea.setVisible(true);
-							String result="\n"+"   Id: "+rs.getInt("Id")+"\n\n"+"   Name: "+rs.getString("Name")+"\n\n"+"   Address: "+rs.getString("Address")+"\n\n"+"   Course: "+rs.getString("Course")+"\n\n"+"   Email: "+rs.getString("Email")+"\n\n"+"   Phone: "+rs.getString("Phone");
+							String result="\n"+"   Id           :  "+rs.getInt("Id")+"\n\n"+"   Name     :  "+rs.getString("Name")+"\n\n"+"   Address :  "+rs.getString("Address")+"\n\n"+"   Course   :  "+rs.getString("Course")+"\n\n"+"   Email      :  "+rs.getString("Email")+"\n\n"+"   Phone    :  "+rs.getString("Phone");
 							textArea.setText(result);						
 							search_bar.setText("");
 							

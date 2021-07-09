@@ -141,8 +141,8 @@ public class Student_Management extends JFrame {
 		scrollPane.setViewportView(table);
 
 //Connecting JDBC
-		String url="jdbc:mysql://localhost:3306/Database_name"; 			//ip port and database name stored in the url (create a database and add a table with Id,Name,Address,Course,Email,Phone)
-		String uname="username"; 										//default username root
+		String url="jdbc:mysql://localhost:3306/database-name"; 			//ip port and database name stored in the url (create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String uname="root"; 										//default username root
 		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		Statement st=con.createStatement(); 

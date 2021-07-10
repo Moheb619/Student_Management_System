@@ -63,21 +63,22 @@ public class Student_Management extends JFrame {
 		setIconImage(img.getImage()); 
 		
 //		Set Background color
-		getContentPane().setBackground(new Color(179, 218, 255));
+		getContentPane().setBackground(new Color(52,172,188,255));
 		
-		JLabel lblNewLabel = new JLabel("Student Management System");
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("image/student-management-headline.gif"));
 		lblNewLabel.setBackground(new Color(0, 204, 204));
-		lblNewLabel.setBounds(352, 10, 443, 35);
+		lblNewLabel.setBounds(374, 10, 443, 35);
 		lblNewLabel.setFont(new Font("Rockwell Extra Bold", Font.PLAIN, 24));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Student ID");
-		lblNewLabel_1.setBounds(563, 72, 79, 14);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(563, 72, 94, 14);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 13));
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("image/logo.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("image/student-management.gif"));
 		lblNewLabel_2.setBounds(61, 56, 406, 217);
 		contentPane.add(lblNewLabel_2);
 		
@@ -162,12 +163,12 @@ public class Student_Management extends JFrame {
 //Adding Label
 		JLabel lblNewLabel_1_1 = new JLabel("Address");
 		lblNewLabel_1_1.setBounds(563, 134, 79, 14);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 13));
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Student Name");
 		lblNewLabel_1_2.setBounds(563, 103, 94, 14);
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.BOLD, 13));
 		contentPane.add(lblNewLabel_1_2);
 		
 		
@@ -303,22 +304,23 @@ public class Student_Management extends JFrame {
 		contentPane.add(btnClear);
 		
 		JLabel lblProduct = new JLabel("Student Details");
+		lblProduct.setForeground(Color.BLACK);
 		lblProduct.setBounds(421, 284, 221, 35);
-		lblProduct.setFont(new Font("Castellar", Font.BOLD, 21));
+		lblProduct.setFont(new Font("Century Gothic", Font.BOLD, 27));
 		contentPane.add(lblProduct);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("Course");
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblNewLabel_1_1_1.setBounds(563, 171, 79, 14);
 		contentPane.add(lblNewLabel_1_1_1);
 		
 		JLabel lblNewLabel_1_1_2 = new JLabel("Email");
-		lblNewLabel_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblNewLabel_1_1_2.setBounds(563, 203, 79, 14);
 		contentPane.add(lblNewLabel_1_1_2);
 		
 		JLabel lblNewLabel_1_1_3 = new JLabel("Phone");
-		lblNewLabel_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_1_3.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblNewLabel_1_1_3.setBounds(563, 230, 79, 14);
 		contentPane.add(lblNewLabel_1_1_3);
 		
@@ -358,8 +360,13 @@ public class Student_Management extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				AboutUs a=new AboutUs();
-				a.setVisible(true);
+				try {
+					AboutUs a=new AboutUs();
+					a.setVisible(true);
+				}
+				catch(Exception ex) {
+					ex.printStackTrace();
+				}
 			}
 		});
 		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD, 14));

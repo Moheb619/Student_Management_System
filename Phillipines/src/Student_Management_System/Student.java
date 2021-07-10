@@ -68,7 +68,7 @@ public class Student extends JFrame {
 		search_bar.setBounds(222, 72, 233, 40);
 		contentPane.add(search_bar);
 		
-		String url="jdbc:mysql://localhost:3306/Database-name"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
+		String url="jdbc:mysql://localhost:3306/database-name"; 			//ip port and database name stored in the url(create a database and add a table with Id,Name,Address,Course,Email,Phone)
 		String uname="root"; 										//default username root
 		String pass="password"; 
 		Connection con=DriverManager.getConnection(url,uname,pass);
@@ -102,8 +102,13 @@ public class Student extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				AboutUs a=new AboutUs();
-				a.setVisible(true);
+				try {
+					AboutUs a=new AboutUs();
+					a.setVisible(true);
+				}
+				catch(Exception ex) {
+					ex.printStackTrace();
+				}
 			}
 		});
 		lblNewLabel_4_1.setForeground(Color.WHITE);
@@ -169,7 +174,7 @@ public class Student extends JFrame {
 		contentPane.add(btnClear);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("image/searchlogo.png"));
+		lblNewLabel_3.setIcon(new ImageIcon("image/studentbg.gif"));
 		lblNewLabel_3.setBounds(0, 0, 692, 430);
 		contentPane.add(lblNewLabel_3);
 	}

@@ -45,9 +45,10 @@ public class Login extends JFrame {
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null);
 		
-		JLabel lblNewLabel = new JLabel("Login");
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("image/logo.gif"));
 		lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 25));
-		lblNewLabel.setBounds(362, 109, 79, 50);
+		lblNewLabel.setBounds(353, 109, 99, 50);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("User");
@@ -128,8 +129,13 @@ public class Login extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				AboutUs a=new AboutUs();
-				a.setVisible(true);
+				try {
+					AboutUs a=new AboutUs();
+					a.setVisible(true);
+				}
+				catch(Exception ex) {
+					ex.printStackTrace();
+				}
 			}
 		});
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 13));
